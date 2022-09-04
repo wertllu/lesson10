@@ -17,6 +17,7 @@ def echo_all(message):
 
 
 print(game_help())
+
 print(game_play('1'))
 print(game_play('2'))
 print(game_play('3'))
