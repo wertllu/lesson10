@@ -14,15 +14,17 @@ def game_play(i):
         
     result=''
 
-    if i == '1':
+    if i == '1' or i =='камінь':
         result += 'ви обрали камінь'
+        a=1
 
-    elif i == '2':
+    elif i == '2' or i =='ножиці':
         result += 'ви обрали ножиці'
+        a=2
 
-    elif i == '3':
+    elif i == '3' or i =='папір':
         result += 'ви обрали папір'
-
+        a=3
     else:
         result += 'вийшла якась помилка'
 
@@ -42,7 +44,7 @@ def game_play(i):
     else:
         result += '\nвийшла якась помилка'
 
-    a = int(i)
+    # a = int(i)
 
     if f == a:
         result += '\nнічия!'
