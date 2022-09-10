@@ -1,3 +1,4 @@
 # lesson10
 test lesson10 by Nina
-sdfgsfg
+
+(c) nina
