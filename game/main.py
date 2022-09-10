@@ -6,9 +6,9 @@ bot = telebot.TeleBot("5799033377:AAESuDz_aZQ68oF7eKHPSEUhP5IkRFxb2JM")
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
 	markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-	btn1 = types.KeyboardButton("🪨камінь")
-	btn2 = types.KeyboardButton("✂️ножиці")
-	btn3 = types.KeyboardButton("📄папір")
+	btn1 = types.KeyboardButton("камінь")
+	btn2 = types.KeyboardButton("ножиці")
+	btn3 = types.KeyboardButton("папір")
 	markup.add(btn1, btn2, btn3)
 	bot.send_message(message.chat.id, text=game_help(), reply_markup=markup)
 
