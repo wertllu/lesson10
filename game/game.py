@@ -10,11 +10,11 @@ def game_get_random():
     return all_options[f]
 
 def game_get_result(u, ai):
-    if u not in all_options:
+    if game_option_index(u) == -1:
         return 'перевірте чи правильно вписали свій вибір або виберіть його у меню'
 
-    a = all_options.index(u) + 1
-    f = all_options.index(ai) + 1
+    a = game_option_index(u) + 1
+    f = game_option_index(ai) + 1
 
     if f == a:
         return 'нічия!'
@@ -22,3 +22,10 @@ def game_get_result(u, ai):
         return 'я виграла!'
     else:
         return 'ви виграли!'
+
+
+def game_option_index(u: str):
+    for i in range(0,3):
+        if u.find(all_options[i]) != -1: #
+            return i
+    return -1
